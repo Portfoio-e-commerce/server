@@ -4,16 +4,16 @@ const { register, login, logout } = require('../controllers/user')
 const { buyItem, getItem, getCategory, addItem, getItemByCategory } = require('../controllers/items')
 const { getTransaction } = require('../controllers/transaction')
 
-/*  Register
-    body: name, email, password
-*/
-router.post('/register', register) 
-
-
 /*  Login
     body: email, password
 */
 router.post('/login', login)
+
+
+/*  Register
+    body: name, email, password
+*/
+router.post('/register', register) 
 
 
 /*  Buy Item
@@ -34,7 +34,7 @@ router.get('/get-items', getItem )
 /*  Add Item
 body: name, price, description, categoryId, 
 */
-router.post('/add-item', addItem)
+// router.post('/add-item', addItem)
 
 
 // Get Category
